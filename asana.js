@@ -39,7 +39,7 @@ Asana.prototype._request = function (options, callback) {
   if (this.api_key) {
     options.headers.authorization = this.api_key;
   }
-  console.log(options)
+  //console.log(options)
   return request(options, function(error, response, body) {
     if (error) {
       callback(error, null);
@@ -106,8 +106,15 @@ Asana.prototype._getOptions = function(options){
   }
 }
 // ----- Users --------------------------------------------------------------------------------------------------------
-// SHOWING A SINGLE USER
+// 
 // GET    /users/me
+/**
+ * Retrieve SHOWING A SINGLE USER
+ * @class asana
+ * @method 
+ * @param {String} or {null}
+ * @param {Functon} callback Method to execute on completion
+ */
 Asana.prototype.getUserMe = function(options, callback){
   return this._get('/users/me' + this._getOptions(options), callback);
 };
@@ -152,7 +159,7 @@ Asana.prototype.getTask = function(task_id, options, callback){
   return this._get('/tasks/' + task_id + this._getOptions(options), callback);
 };
 // GET    /tasks
-Asana.prototype.getTasks = function(task, options, callback){
+Asana.prototype.getTasks = function(options, callback){
   return this._get('/tasks' + this._getOptions(options), callback);
 };
 // GET    /projects/project-id/tasks
@@ -161,7 +168,7 @@ Asana.prototype.getTasksProject = function(project_id, options, callback){
 };
 // GET    /workspaces/workspace-id/tasks
 Asana.prototype.getTasksWorkspace = function(workspace_id, options, callback){
-  return this._get('/workspaces' + workspace_id + '/tasks' + this._getOptions(options), callback);
+  return this._get('/workspaces/' + workspace_id + '/tasks' + this._getOptions(options), callback);
 };
 // READING TASK ACTIVITY AND COMMENTS
 // GET    /tasks/task-id/stories
@@ -170,7 +177,7 @@ Asana.prototype.getTaskActivity = function(task_id, options, callback){
 };
 // WORKING WITH PROJECTS ASSOCIATED WITH A TASK
 // GET    /tasks/task-id/projects
-Asana.prototype.getTaskProject = function(task_id, options, callback){
+Asana.prototype.getTaskProjects = function(task_id, options, callback){
   return this._get('/tasks/' + task_id + '/projects' + this._getOptions(options), callback);
 };
 // POST    /tasks/task-id/addProject
@@ -260,7 +267,7 @@ Asana.prototype.getStoriesTask = function(task_id, options, callback){
 };
 // GET    /projects/project-id/stories
 Asana.prototype.getStoriesProject = function(project_id, options, callback){
-  return this._get('/project/' + project_id + '/stories' + this._getOptions(options), callback);
+  return this._get('/projects/' + project_id + '/stories' + this._getOptions(options), callback);
 };
 // SHOWING A SINGLE STORY
 // GET    /stories/story-id
@@ -275,7 +282,7 @@ Asana.prototype.addComment = function(project_id, ref, callback){
 // ----- Workspaces -----
 // SHOWING AVAILABLE WORKSPACES
 // GET    /workspaces
-Asana.prototype.getWorkspaces = function(workspace_id, options, callback){
+Asana.prototype.getWorkspaces = function(options, callback){
   return this._get('/workspaces' + this._getOptions(options), callback);
 };
 
