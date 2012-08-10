@@ -11,7 +11,7 @@ git clone https://github.com/rushis/asana-api.git
 ``` js
   var asana = require('asana');
   
-  asana.setApiKey('1NK9OUI.Qn0nrbByagb8fB2TGyOeziEN
+  asana.setApiKey('1NK9OUI.Qn0nrbByagb8fB2TGyOeziEN');
   
   asana.getUserMe(null, function(error, me){
     console.log(me)
