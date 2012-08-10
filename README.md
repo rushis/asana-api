@@ -68,7 +68,13 @@ GET    /workspaces
 PUT    /workspaces/workspace-id
 ```
 
-## Roadmap to 
+## Roadmap to 1.0
+
+  * Add npm package
+  * Add tests
+  * Document fully all methods
+  * Add Examples
+  * Release Asana v1.0
 
 ## License (MIT)
 
