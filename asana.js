@@ -367,6 +367,33 @@ Asana.prototype.removeProject = function(task_id, ref, callback){
   return this._post('/tasks/' + task_id + '/removeProject', JSON.stringify({data: ref}), callback);
 };
 
+/**
+ * Add tag in task
+ * @class Asana
+ * @method addProject
+ * @apiRequest POST /tasks/task-id/addTag
+ * @param {String} Task ID
+ * @param {JSON} Data
+ * @param {Functon} callback Method to execute on completion
+ */
+Asana.prototype.addTag = function(task_id, ref, callback){
+  return this._post('/tasks/' + task_id + '/addTag', JSON.stringify({data: ref}), callback);
+};
+
+/**
+ * Remove tag in task
+ * @class Asana
+ * @method removeProject
+ * @apiRequest POST /tasks/task-id/removeTag
+ * @param {String} Task ID
+ * @param {JSON} Data
+ * @param {Functon} callback Method to execute on completion
+ */ 
+Asana.prototype.removeTag = function(task_id, ref, callback){
+  return this._post('/tasks/' + task_id + '/removeTag', JSON.stringify({data: ref}), callback);
+};
+
+
 // ****** PROJECTS ***********
 /**
  * Creating a new project
@@ -519,7 +546,7 @@ Asana.prototype.updateTag = function(tag_id, ref, callback){
  * @param {Functon} callback Method to execute on completion
  */
 Asana.prototype.getTagTasks = function(tag_id, options, callback){
-  return this._get('/workspaces/' + workspace_id + '/projects' + this._getOptions(options), callback);
+  return this._get('/tags/' + tag_id + '/tasks' + this._getOptions(options), callback);
 };
 
 /**
