@@ -1,0 +1,32 @@
+{
+  "name": "asana_api",
+  "author": "Ruslan Khissamov <rrkhissamov@gmail.com>",
+  "contributors":[
+    { "name": "Ruslan Khissamov", "github": "https://github.com/rushis" }
+  ],
+  "homepage": "https://github.com/rushis/asana-api",
+  "description": "NodeJS Asana API (v1) Wrapper",
+  "version": "0.6.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rushis/asana-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rushis/asana-api/issues"
+  },
+  "keywords": ["asana", "api", "wrapper", "full api", "1"],
+  "main": "./lib/asana",
+  "engines": { 
+    "node":">= 0.6.0"
+  },
+  "dependencies": {
+    "request":"2.9.153",
+    "utile":"*"
+  },
+  "devDependencies":{
+    "vows":"0.8.2"
+  },
+  "licenses":[{
+    "type":"MIT"
+  }]
+}
