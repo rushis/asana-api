@@ -23,25 +23,49 @@ git clone https://github.com/rushis/asana-api.git
 ### Implemented
 
 ``` scala
+GET   /users/user-id 
+GET   /users/me
+GET   /users
+GET   /workspaces/workspace-id/users
 
-POST    /login 
-GET     /me
-GET     /me/settings
-GET     /me/events
-GET     /me/friends
-GET     /me/services
-GET     /me/shares
+POST  /tasks
+POST  /workspaces/workspace-id/tasks
+GET   /tasks/task-id
+PUT   /tasks/task-id
+GET   /tasks
+GET   /projects/project-id/tasks
+GET   /workspaces/workspace-id/tasks
+GET   /tasks/task-id/stories
+POST  /tasks/task-id/stories
+GET   /tasks/task-id/projects
+POST  /tasks/task-id/addProject
+POST  /tasks/task-id/removeProject
+GET   /tasks/task-id/tags
+POST  /tasks/task-id/addTag
+POST  /tasks/task-id/removeTag
 
-GET     /me/tasks
-POST    /me/tasks
-PUT     /me/<task_id>
-DELETE  /me/<task_id>
+POST  /projects
+POST  /workspaces/workspace-id/projects
+GET   /projects/project-id
+PUT   /projects/project-id
+GET   /projects/project-id/tasks
+GET   /projects
+GET   /workspaces/workspace-id/projects
 
-GET     /me/tasks
-POST    /me/tasks
-PUT     /me/<task_id>
-DELETE  /me/<task_id>
+POST  /tags
+POST  /workspaces/workspace-id/tags
+GET   /tags/tag-id
+PUT   /tags/tag-id
+GET   /tags/tag-id/tasks
+GET   /tags
+GET   /workspaces/workspace-id/tags
 
+GET   /projects/project-id/stories
+GET   /stories/story-id
+POST  /projects/project-id/stories
+
+GET    /workspaces
+PUT    /workspaces/workspace-id
 ```
 
 ## License (MIT)
