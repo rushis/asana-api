@@ -32,6 +32,7 @@ POST  /tasks
 POST  /workspaces/workspace-id/tasks
 GET   /tasks/task-id
 PUT   /tasks/task-id
+DELETE /tasks/task-id - deleteTask(taskid, callback)
 GET   /tasks
 GET   /projects/project-id/tasks
 GET   /workspaces/workspace-id/tasks
