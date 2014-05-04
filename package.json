@@ -2,7 +2,8 @@
   "name": "asana_api",
   "author": "Ruslan Khissamov <rrkhissamov@gmail.com>",
   "contributors":[
-    { "name": "Ruslan Khissamov", "github": "https://github.com/rushis" }
+    { "name": "Ruslan Khissamov", "github": "https://github.com/rushis" },
+    { "name": "Alexey Kolikov", "github": "https://github.com/g00dnight" }
   ],
   "homepage": "https://github.com/rushis/asana-api",
   "description": "NodeJS Asana API (v1) Wrapper",
